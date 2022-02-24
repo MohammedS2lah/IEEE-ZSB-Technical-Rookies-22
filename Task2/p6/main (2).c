@@ -4,7 +4,7 @@
 int main()
 {
     float sum1=0,sum2=0,sum3=0,av1,av2,av3;
-    int i,n;
+    int i,n,j,k;
     char std1[20],std2[20],std3[20],s[20];
     int sd1[20],sd2[20],sd3[20];
     printf("\nEnter the first student name\n");
@@ -22,25 +22,25 @@ int main()
         sum1+=sd1[i];
     }
     printf("\nEnter grades of second student\n");
-    for (i=0;i<n;i++)
+    for (j=0;j<n;j++)
     {
-        scanf("%d",&sd2[i]);
-        sum1+=sd2[i];
+        scanf("%d",&sd2[j]);
+        sum2+=sd2[j];
     }
     printf("\nEnter grades of third student\n");
-    for (i=0;i<n;i++)
+    for (k=0;k<n;k++)
     {
-        scanf("%d",&sd3[i]);
-        sum1+=sd3[i];
+        scanf("%d",&sd3[k]);
+        sum3+=sd3[k];
     }
     av1=(sum1/n);
     av2=(sum2/n);
     av3=(sum3/n);
     printf("\nEnter student name to get his Average\n");
     gets(s);
-    if (s==std1)
+    if (s[20]==std1[20])
         printf("\n%5.2f",av1);
-    else if (s==std2)
+    else if (s[20]==std2[20])
         printf("\n%5.2f",av2);
     else
         printf("\n%5.2f",av3);
